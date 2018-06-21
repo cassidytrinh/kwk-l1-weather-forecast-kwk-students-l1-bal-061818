@@ -25,9 +25,12 @@ end
 # You'll want to use the each method to iterate over the hash and print out
 # `The city is New York.` `The description is Partly Cloudy.` `The temperature is 66.3.`
 def city_weather_info(weather)
-	puts "The city is #{location(weather)}."
-	puts "The description is #{description(weather)}."
-	puts "The temperature is #{weather[:temperature_farenheit]}."
+	# puts "The city is #{location(weather)}."
+	# puts "The description is #{description(weather)}."
+	# puts "The temperature is #{weather[:temperature_farenheit]}."
+	weather.each do |condition, info|
+		puts "The #{condition} is #{info}."
+	end
 	return weather
 end
 
